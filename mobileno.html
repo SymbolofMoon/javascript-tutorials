@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile Number Validation</title>
+         <script type="text/javascript">
+            //lecture 30
+            function validate(){
+                var mobno = document.getElementById("mobno");
+                var regx = /^[6-9][0-9]{9}$/;
+                if (regx.test(mobno.value)){
+                    //alert("Mobile no is correct");
+                    mobno.style.border="solid 3px green";
+                    document.getElementById("mobuser1").style.visibility="visible";
+                    document.getElementById("mobuser1").style.color="green";
+                    document.getElementById("mobuser1").innerHTML="Valid";
+                }
+                else {
+                   // alert("Mobile no is incorrect")
+                   mobno.style.border="solid 3px red";
+                   document.getElementById("mobuser1").style.visibility="visible";
+                }
+            }
+            
+         </script>   
+    </head>
+    
+    <body>
+        <form >
+        <p> Enter your mobile number</p>    <br>
+        <input placeholder="Mobile Number" type="text" id="mobno" >
+        <label id="mobuser1" style="color:red; visibility: hidden">Invalid</label>
+         <label id="mobuser2" style="color:green; visibility: hidden ">Valid</label><br><br>
+        <button  onclick="return validate()" type="button"  >Submit</button>
+        </form>
+    </body>
+
+
+</html>    

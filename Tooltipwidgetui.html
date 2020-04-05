@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tool Tip Widget in jQuery UI</title>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.theme.css">
+    </head>
+    
+    <body>
+     <div id="mydiv">
+         <h3> Tooltip in jQuery</h3>
+         <img src="moorpankh.jpeg" width="200px" title="" id="myimg">
+     </div>   
+    </body>
+    <script src="jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="jquery-ui/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $("#myimg").tooltip({
+            //track:true, 
+            content: "Peacock's feather",
+            show:{effect:"pulsate",duration:3000}, 
+            hide:{effect:"explode",duration:3000}// bounce,pulsate,highlight,explode,blind
+        });
+
+    </script>
+
+</html>    

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Element By Tag</title>
+         <script type="text/javascript">
+            //lecture:23
+
+            function changeStyle(){
+               var para= document.getElementsByTagName("p");
+               var ele = document.getElementsByClassName("mypara")
+               para[0].style.fontSize = "100";
+               para[1].style.color="red";
+               para[2].style.backgroundColor="blue";
+               para[3].style.fontWeight="bold";
+               para[4].style.fontStyle="Italic";
+              for (var x=0;x<ele.length;x++)
+              {
+                  ele[x].style.color="green";
+              }
+
+            }
+
+
+            //lecture 24 getElementByClassName class can also access tag name
+
+            
+         </script>   
+    </head>
+    
+    <body>
+       <p>This is paragraph 1 </p>
+       <p>This is paragraph 2 </p>
+       <p>This is paragraph 3 </p>
+       <p>This is paragraph 4 </p>
+       <p>This is paragraph 5 </p>
+       <p>This is paragraph 6 </p>
+       <p class="mypara">This is paragraph 7 </p>
+       <p class="mypara">This is paragraph 8 </p>
+       <p class="mypara">This is paragraph 9 </p>
+       <p class="mypara">This is paragraph 10 </p>
+       <button onclick="changeStyle()">Clicke me</button>
+    </body>
+
+
+</html>    

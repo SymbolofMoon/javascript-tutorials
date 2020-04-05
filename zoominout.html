@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zoom In and Zoom Out</title>
+         <script type="text/javascript">
+            //lecture:35: failed
+           
+            
+            var width=100;
+            var ultimate=200;
+            var difference=2;
+            var intervalID=0;
+            function  expand(){
+              intervalID= setInterval(zoomIn,20);
+
+            }
+
+            function zoomIn(){
+                var img1 = document.getElementById("img1")
+              
+                if (width<ultimate){
+
+                img1.style.width = width;
+
+                width = width+difference;
+                console.log(width);
+            
+             }
+                else{
+
+                clearInterval(intervalID);
+             }
+            }
+         </script>   
+    </head>
+    
+    <body>
+      <img  onmouseover="expand()" onmouseout="shrink()"  src="moorpankh.jpeg" id="img1" width="100"/>
+    </body>
+
+
+</html>    

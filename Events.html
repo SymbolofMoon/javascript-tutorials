@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events-jQuery</title>
+        <style>
+          .mydivs{
+              border: 3px solid red;
+              margin-left: 80px;
+              margin-right: 80px;
+              padding: 5px;
+          }
+          #firstdiv{
+              color: red;
+          }
+          #cube{
+
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            position: absolute;
+            opacity: 0.5;
+          }
+        </style> 
+    </head>
+     <h2>Events in jQuery</h2>
+     <p>This is a paragraph</p>
+      
+      <div class="mydivs" id="firstdiv">
+          <p>This is first paragraph of first division</p>
+          <p>This is second paragraph of first division</p>
+
+      </div>  
+      <br><br> 
+      <div class="mydivs" id="seconddiv">
+            <p>This is first paragraph of second division</p>
+            <p>This is second paragraph of second division</p>
+  
+        </div>
+        <br><br>   
+      <div class="mydivs" id="thirddiv">
+          <ul>
+              <li>List 1</li>
+              <li>List 2</li>
+              <li>List 3</li>
+              <li>List 4</li>
+          </ul>
+
+      </div>
+      <br><br>
+      <div>
+            <ul>
+                    <li>List 1</li>
+                    <li>List 2</li>
+                    <li>List 3</li>
+                    <li>List 4</li>
+                </ul>
+      </div>      
+      <button id="btn1">Fade Out </button>
+      <button id="btn2">Fade In</button>
+      <button id="btn3">Fade Toggle</button>
+      <button id="btn4">Hide</button>
+      <button id="btn5">Show</button>
+      <button id="btn6">Toggle</button>
+      <button id="btn7">Slide Up </button>
+      <button id="btn8">Slide Down</button>
+      <button id="btn9">Slide Toggle</button>
+      <div id="cube" class="mycube" >
+         
+          </div>
+
+          <button id="animae">Animate</button>
+
+
+
+     <body>
+
+    </body>
+    <script src="jquery-3.4.1.js"  type="text/javascript"></script>
+    <script> 
+
+    $("#btn1").click(fn1);
+      function fn1(){
+         $("#firstdiv").fadeOut(2000);
+      }
+    $("#btn2").click(fn2);
+    function fn2(){
+        $("#firstdiv").fadeIn(2000);
+    }
+    $("#btn3").click(fn3);
+     function printMsg(){
+         alert("Effect is done");
+     }
+      function fn3(){
+         $("#firstdiv").fadeToggle(2000,printMsg);// callbackfunction means that 1st the effect will be done then a function is called 
+    }
+    $("#btn4").click(fn4);
+      function fn4(){
+         $("#firstdiv").hide(200);
+    }
+    $("#btn5").click(fn5);
+      function fn5(){
+         $("#firstdiv").show(2000);
+    }
+    $("#btn6").click(fn6);
+      function fn6(){
+         $("#firstdiv").toggle(200);
+    } 
+     $("#btn7").click(fn7);
+      function fn7(){
+         $("#firstdiv").slideUp(2000);
+    }
+    $("#btn8").click(fn8);
+    function fn8(){
+       $("#firstdiv").slideDown(2000);
+    } 
+    $("#btn9").click(fn9);
+    function fn9(){
+       $("#firstdiv").slideToggle(2000);
+    }
+    $("#animae").click(function(){
+
+        $("#cube").animate({
+
+            left: '150px',
+            opacity: '1',
+            width:'200px',
+            height: '200px'
+        },2000)
+    })
+    </script>
+
+</html>    

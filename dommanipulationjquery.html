@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manupulation-Jquery</title>
+        <style>
+             #firstdiv{
+
+                border:cyan solid 2px;
+                color: darkblue;
+                padding: 10px;
+             }
+
+        </style>
+         
+    </head>
+    
+    <body> <h1 id="heading">DOM maupulation</h1>
+        <div class="mydiv" id="firstdiv">
+            <p id="p1"  class=" myp1" value="This is value">This is first <b><i>paragraph</i></b> in first division</p>
+
+        </div>
+        <button  id="btn1">Action</button>
+    </body>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        //fade out
+        //text() html() attr() css()
+
+
+       $("#btn1").click(function(){
+
+          alert($('#p1').text());
+          //$('#p1').text("Hello  World");
+           alert($("#p1").html());
+            alert($('#p1').attr("id")) ;
+           alert($("#p1").css("color"));
+       })
+
+
+    </script>
+
+</html>    

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ClassObject</title>
+         <script type="text/javascript">
+            var Car = {
+               car_brand:"Tesla",
+               car_model: "Model 1<br>",
+               price: 3500000,
+
+               testAutoPilot : function(){
+
+                  document.write("This car is autopiloted");
+
+               }
+
+            } 
+
+
+            document.write(Car.car_model)
+            //constructor function
+            function Cars(cars_brand,cars_model,prices)
+            {
+              this.cars_brand= cars_brand;
+              this.cars_model= cars_model;
+              this.prices= prices;
+              this.testAutoPilots = function()
+              {
+                  document.write("i am in autopilot mode<br>")
+
+
+              }
+              
+            }
+
+            var c1= new Cars ("Maruti", "Model 3",350000)
+            c1.testAutoPilots();
+            document.write(c1.cars_brand);
+
+            //100 line of code
+
+            Cars.fuelType = "Electric";
+            document.write("<h2>"+Cars.fuelType+"</h2>")
+            Cars.prices="45000";
+            document.write(typeof(Cars.prices))
+        </script>   
+    </head>
+    
+    <body>
+
+    </body>
+
+
+</html>    

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Change Image</title>
+         <script type="text/javascript">
+            //lecture 25 mouseover and mouseout
+
+              function setNewImage(){
+                document.getElementById("img1").src="about.jpeg";
+              } 
+              function setOldImage(){
+                document.getElementById("img1").src="97e59af1eb36081c65ff99a574afd9d2.jpg";
+              }   
+         </script>   
+    </head>
+    
+    <body>
+        <img  id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()"  src="97e59af1eb36081c65ff99a574afd9d2.jpg">
+    </body>
+
+
+</html>    
